@@ -1,6 +1,6 @@
     1.
         
-        db.people.find({ "scores" : { $all : [ { "$elemMatch" : { score: { $gte: 87, $lte: 96 } } } ] } });
+        db.people.find({ "scores" : { $all : [ { "$elemMatch" : { score: { $gte: 87, $lte: 93 } } } ] } });
     2.
         
         db.people.aggregate({ $unwind: "$scores" }, { $match: { "scores.type" : "exam", "scores.score": { $gt: 90 } } });
